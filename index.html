@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conferences – Bhaurao Kakatkar College, Belgaum</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0d1b2a;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --cream: #f7f3ec;
+  --slate: #2c3e50;
+  --text: #1a1a2e;
+  --muted: #6b7280;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Crimson Pro', Georgia, serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+
+header { background: var(--navy); position: relative; overflow: hidden; }
+header::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(201,168,76,0.035) 50px, rgba(201,168,76,0.035) 100px); }
+.header-inner { max-width: 1100px; margin: 0 auto; padding: 30px 24px 24px; display: flex; align-items: center; gap: 22px; position: relative; z-index: 1; }
+.logo-emblem { width: 86px; height: 86px; flex-shrink: 0; border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(201,168,76,0.08); font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 900; color: var(--gold); position: relative; }
+.logo-emblem::after { content: ''; position: absolute; inset: 5px; border: 1px solid rgba(201,168,76,0.25); border-radius: 50%; }
+.header-text { flex: 1; }
+.college-name { font-family: 'Playfair Display', serif; font-size: clamp(17px, 2.8vw, 27px); font-weight: 900; color: #fff; line-height: 1.2; }
+.college-sub { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold-light); margin-top: 5px; letter-spacing: 2px; text-transform: uppercase; }
+.college-affil { font-size: 13px; color: rgba(255,255,255,0.44); margin-top: 4px; font-style: italic; }
+.naac-badge { display: inline-block; margin-top: 7px; background: rgba(201,168,76,0.14); border: 1px solid rgba(201,168,76,0.38); color: var(--gold-light); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; }
+.gold-rule { height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light) 40%, transparent); }
+
+nav { background: var(--slate); position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--gold); }
+.nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; overflow-x: auto; scrollbar-width: none; }
+.nav-inner::-webkit-scrollbar { display: none; }
+nav a { font-family: 'DM Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255,255,255,0.65); text-decoration: none; padding: 13px 16px; white-space: nowrap; border-bottom: 3px solid transparent; transition: all 0.2s; display: block; }
+nav a:hover, nav a.active { color: var(--gold-light); border-bottom-color: var(--gold); background: rgba(201,168,76,0.08); }
+
+.hero { background: linear-gradient(135deg, #0d1b2a 0%, #1a2a4a 55%, #221408 100%); padding: 68px 24px 58px; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: 'BKC'; position: absolute; font-family: 'Playfair Display', serif; font-size: clamp(100px, 25vw, 280px); font-weight: 900; color: rgba(255,255,255,0.025); top: 50%; left: 50%; transform: translate(-50%, -50%); letter-spacing: 30px; pointer-events: none; }
+.hero-tag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.35); padding: 5px 16px; margin-bottom: 16px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 52px); font-weight: 900; color: #fff; line-height: 1.15; margin-bottom: 13px; }
+.hero h1 span { color: var(--gold-light); }
+.hero p { font-size: clamp(15px, 2vw, 18px); color: rgba(255,255,255,0.6); max-width: 560px; margin: 0 auto; font-style: italic; line-height: 1.7; }
+.hero-links { margin-top: 20px; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--gold-light); letter-spacing: 0.5px; }
+.hero-links a { color: var(--gold-light); text-decoration: underline; }
+
+.section-head { text-align: center; margin-bottom: 42px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3.5vw, 38px); font-weight: 700; color: var(--navy); display: inline-block; position: relative; padding-bottom: 13px; }
+.section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); height: 3px; width: 56px; background: var(--gold); }
+.section-sub { font-size: 16px; color: var(--muted); font-style: italic; margin-top: 11px; }
+
+.conferences-section { max-width: 1100px; margin: 0 auto; padding: 62px 24px; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 26px; }
+.conf-card { background: #fff; border: 1px solid #e8e0d0; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; }
+.conf-card:hover { transform: translateY(-7px); box-shadow: 0 22px 55px rgba(13,27,42,0.14); }
+.conf-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--card-color, var(--gold)); }
+.card-badge { position: absolute; top: 14px; right: 14px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--card-color, var(--gold)); color: var(--card-color, var(--gold)); background: rgba(255,255,255,0.92); }
+.card-header { padding: 24px 20px 13px; border-bottom: 1px solid #f0e8d8; }
+.card-code { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--card-color, var(--gold)); text-transform: uppercase; margin-bottom: 7px; }
+.card-title { font-family: 'Playfair Display', serif; font-size: 17.5px; font-weight: 700; color: var(--navy); line-height: 1.35; padding-right: 58px; }
+.card-body { padding: 13px 20px 15px; }
+.card-dept { font-family: 'DM Mono', monospace; font-size: 10.5px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.card-desc { font-size: 15px; color: #4a4a5a; line-height: 1.65; }
+.card-footer { padding: 11px 20px; background: #faf6ef; border-top: 1px solid #f0e8d8; display: flex; align-items: center; justify-content: space-between; }
+.card-date { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); }
+.card-arrow { width: 29px; height: 29px; background: var(--card-color, var(--gold)); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 15px; transition: background 0.2s; }
+.conf-card:hover .card-arrow { background: var(--navy); }
+
+.about-section { background: var(--navy); padding: 62px 24px; position: relative; overflow: hidden; }
+.about-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 65% 50%, rgba(201,168,76,0.06) 0%, transparent 65%); }
+.about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 58px; align-items: center; position: relative; z-index: 1; }
+@media(max-width:720px){ .about-inner { grid-template-columns: 1fr; gap: 34px; } }
+.about-section .section-title { color: #fff; }
+.about-section .section-title::after { background: var(--gold); }
+.about-section .section-sub { color: rgba(255,255,255,0.45); }
+.about-text p { color: rgba(255,255,255,0.72); font-size: 16px; line-height: 1.8; margin-bottom: 13px; }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.stat-box { border: 1px solid rgba(201,168,76,0.22); padding: 20px 16px; text-align: center; background: rgba(201,168,76,0.05); }
+.stat-number { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; color: var(--gold-light); display: block; }
+.stat-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 4px; display: block; }
+
+.patrons-section { max-width: 1100px; margin: 0 auto; padding: 62px 24px; }
+.patrons-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 18px; margin-top: 34px; }
+.patron-card { background: #fff; border: 1px solid #e8e0d0; padding: 18px 16px; text-align: center; border-top: 3px solid var(--gold); }
+.patron-name { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 5px; }
+.patron-role { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.5; }
+
+footer { background: #07101a; padding: 38px 24px 22px; text-align: center; }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 700; color: var(--gold); margin-bottom: 9px; }
+.footer-text { font-size: 13.5px; color: rgba(255,255,255,0.35); line-height: 1.8; }
+.footer-text a { color: var(--gold-light); text-decoration: none; }
+.footer-divider { height: 1px; background: rgba(201,168,76,0.12); margin: 18px auto; max-width: 260px; }
+
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(7,16,26,0.93); z-index: 1000; overflow-y: auto; backdrop-filter: blur(5px); }
+.modal-overlay.open { display: block; }
+.modal-box { background: var(--cream); max-width: 900px; margin: 30px auto; position: relative; animation: slideUp 0.35s ease; }
+@keyframes slideUp { from { opacity:0; transform:translateY(36px); } to { opacity:1; transform:translateY(0); } }
+@media(max-width:600px){ .modal-box { margin: 0; } }
+.modal-hero { padding: 48px 38px 34px; position: relative; overflow: hidden; }
+@media(max-width:600px){ .modal-hero { padding: 42px 18px 26px; } }
+.modal-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 28px, rgba(255,255,255,0.03) 28px, rgba(255,255,255,0.03) 56px); }
+.modal-type { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; display: block; position: relative; z-index: 1; }
+.modal-title { font-family: 'Playfair Display', serif; font-size: clamp(21px, 3.5vw, 34px); font-weight: 900; color: #fff; line-height: 1.15; position: relative; z-index: 1; }
+.modal-close { position: absolute; top: 13px; right: 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 18px; width: 35px; height: 35px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.2s; }
+.modal-close:hover { background: rgba(255,255,255,0.2); }
+.modal-body { padding: 34px 38px; }
+@media(max-width:600px){ .modal-body { padding: 22px 16px; } }
+
+.info-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.info-chip { background: #fff; border: 1px solid #e0d8c8; padding: 6px 13px; font-family: 'DM Mono', monospace; font-size: 11.5px; color: var(--slate); }
+
+.tab-nav { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 2px solid #e0d8c8; margin-bottom: 26px; }
+.tab-btn { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 9px 15px; cursor: pointer; background: none; border: none; border-bottom: 3px solid transparent; color: var(--muted); margin-bottom: -2px; transition: all 0.2s; }
+.tab-btn.active { color: var(--navy); border-bottom-color: var(--gold); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.modal-sec h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 11px; padding-bottom: 8px; border-bottom: 2px solid #e8e0d0; }
+.modal-sec p { font-size: 15px; line-height: 1.8; color: #3a3a4a; margin-bottom: 11px; }
+.modal-sec ul { list-style: none; padding: 0; }
+.modal-sec ul li { font-size: 15px; color: #3a3a4a; padding: 7px 0 7px 18px; border-bottom: 1px dashed #e8e0d0; position: relative; line-height: 1.5; }
+.modal-sec ul li::before { content: '›'; position: absolute; left: 0; color: var(--gold); font-weight: 700; font-size: 17px; }
+.modal-sec ul li:last-child { border-bottom: none; }
+
+.theme-cols { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)); gap: 18px; margin-top: 10px; }
+.theme-col h4 { font-family: 'Playfair Display', serif; font-size: 14.5px; font-weight: 700; color: var(--navy); margin-bottom: 8px; padding-bottom: 5px; border-bottom: 2px solid var(--gold); }
+.theme-col ul { list-style: none; }
+.theme-col ul li { font-size: 13px; color: #4a4a5a; padding: 4px 0 4px 13px; position: relative; }
+.theme-col ul li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-size: 18px; line-height: 1; }
+
+.reg-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+.reg-table th { background: var(--navy); color: var(--gold-light); font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; padding: 10px 13px; text-align: left; }
+.reg-table td { padding: 9px 13px; border-bottom: 1px solid #e8e0d0; color: #3a3a4a; }
+.reg-table tr:nth-child(even) td { background: #faf6ef; }
+
+.payment-box { background: #fff; border: 1px solid #e8e0d0; border-left: 4px solid var(--gold); padding: 16px 18px; margin-top: 14px; font-size: 14px; color: #3a3a4a; line-height: 1.9; }
+.payment-box strong { color: var(--navy); }
+
+.dates-box { background: var(--navy); padding: 18px 22px; margin-top: 10px; }
+.date-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap; gap: 6px; }
+.date-item:last-child { border-bottom: none; }
+.date-label { font-family: 'DM Mono', monospace; font-size: 11.5px; color: rgba(255,255,255,0.6); }
+.date-val { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--gold-light); font-weight: 700; }
+
+.committee-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 13px; margin-top: 10px; }
+.committee-card { background: #fff; border: 1px solid #e8e0d0; padding: 13px 15px; border-top: 3px solid var(--gold); }
+.committee-role { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
+.committee-name { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+.committee-dept { font-size: 12px; color: var(--muted); font-style: italic; }
+
+/* SPEAKERS COMING SOON */
+.speakers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); gap: 16px; margin-top: 10px; }
+.speaker-card { background: #fff; border: 1px dashed #c8bea8; padding: 22px 14px; text-align: center; position: relative; overflow: hidden; }
+.speaker-card::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(201,168,76,0.04) 8px, rgba(201,168,76,0.04) 16px); }
+.speaker-photo-placeholder { width: 76px; height: 76px; border-radius: 50%; background: linear-gradient(135deg, #e8e0d0, #d4c8b0); margin: 0 auto 11px; display: flex; align-items: center; justify-content: center; border: 2px dashed #c8bea8; position: relative; z-index: 1; }
+.speaker-photo-placeholder svg { width: 34px; height: 34px; opacity: 0.4; }
+.coming-soon-badge { display: inline-block; background: var(--navy); color: var(--gold-light); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; padding: 4px 9px; margin-bottom: 7px; position: relative; z-index: 1; }
+.speaker-name-placeholder { font-family: 'Playfair Display', serif; font-size: 13.5px; font-weight: 700; color: var(--navy); opacity: 0.4; font-style: italic; position: relative; z-index: 1; }
+.speaker-info-placeholder { font-size: 11.5px; color: var(--muted); margin-top: 4px; font-style: italic; position: relative; z-index: 1; }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 22px; }
+.btn-primary { display: inline-block; background: var(--navy); color: var(--gold-light); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 24px; border: 2px solid var(--gold); cursor: pointer; text-decoration: none; transition: all 0.2s; }
+.btn-primary:hover { background: var(--gold); color: var(--navy); }
+.btn-secondary { display: inline-block; background: transparent; color: var(--navy); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 24px; border: 2px solid #c8bea8; cursor: pointer; text-decoration: none; transition: all 0.2s; }
+.btn-secondary:hover { border-color: var(--navy); background: var(--navy); color: #fff; }
+
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 13px; margin-top: 10px; }
+.contact-card { background: #fff; border: 1px solid #e8e0d0; padding: 13px 15px; }
+.contact-name { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--navy); }
+.contact-phone { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--gold); margin-top: 4px; }
+.contact-email { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 2px; word-break: break-all; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-emblem">BKC</div>
+    <div class="header-text">
+      <div class="college-name">D.M.S. Mandal's Bhaurao Kakatkar College, Belgaum</div>
+      <div class="college-sub">Jyoti Compound, Club Road, Camp, Belgaum – 590001, Karnataka</div>
+      <div class="college-affil">Affiliated to Rani Channamma University, Belagavi</div>
+      <div class="naac-badge">NAAC Re-Accredited "A" Grade · CGPA 3.11</div>
+    </div>
+  </div>
+  <div class="gold-rule"></div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="active">Home</a>
+    <a href="#conferences">Conferences</a>
+    <a href="#patrons">Patrons</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-tag">Academic Year 2025–26</div>
+  <h1>Upcoming <span>Conferences</span><br>&amp; Seminars</h1>
+  <p>Fostering interdisciplinary research, scholarly dialogue, and academic excellence across the sciences and humanities.</p>
+  <div class="hero-links">📧 <a href="mailto:bkcbgmconferences@gmail.com">bkcbgmconferences@gmail.com</a> &nbsp;|&nbsp; 🌐 <a href="http://www.bkcollegebgm.org" target="_blank">www.bkcollegebgm.org</a></div>
+</section>
+
+<section class="conferences-section" id="conferences">
+  <div class="section-head">
+    <div class="section-title">Conferences 2026</div>
+    <div class="section-sub">Click any card for full details, themes, registration &amp; fee information</div>
+  </div>
+  <div class="cards-grid">
+
+    <a class="conf-card" style="--card-color:#1a6b8a" href="javascript:void(0)" onclick="openModal('ica')">
+      <div class="card-badge">International</div>
+      <div class="card-header">
+        <div class="card-code">ICAPCMSSD 2026</div>
+        <div class="card-title">Advances in Physical, Chemical and Mathematical Sciences for Sustainable Development</div>
+      </div>
+      <div class="card-body">
+        <div class="card-dept">Dept. of Physics · Chemistry · Mathematics · IQAC</div>
+        <div class="card-desc">Interdisciplinary research in physical, chemical &amp; mathematical sciences addressing global sustainable development challenges.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-date">📅 08 May 2026</span>
+        <div class="card-arrow">→</div>
+      </div>
+    </a>
+
+    <a class="conf-card" style="--card-color:#5a3a7a" href="javascript:void(0)" onclick="openModal('ss')">
+      <div class="card-badge">National Seminar</div>
+      <div class="card-header">
+        <div class="card-code">National Seminar · Hybrid Mode</div>
+        <div class="card-title">Social Sciences in the Age of AI: History, Policy, and Society</div>
+      </div>
+      <div class="card-body">
+        <div class="card-dept">IQAC &amp; Social Sciences Club</div>
+        <div class="card-desc">Exploring AI's profound impact on history, economics, political science, and sociology through an interdisciplinary lens.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-date">📅 18 April 2026</span>
+        <div class="card-arrow">→</div>
+      </div>
+    </a>
+
+    <a class="conf-card" style="--card-color:#8a4a14" href="javascript:void(0)" onclick="openModal('hum')">
+      <div class="card-badge">National Seminar</div>
+      <div class="card-header">
+        <div class="card-code">Humanities Seminar · 2026</div>
+        <div class="card-title">Bridging the Past and Future: Indian Knowledge Systems in Contemporary Society</div>
+      </div>
+      <div class="card-body">
+        <div class="card-dept">Dept. of Marathi · English · Kannada · Hindi</div>
+        <div class="card-desc">Rediscovering India's intellectual heritage — integrating ancient Indian wisdom with modern advancements across languages and literature.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-date">📅 21 April 2026</span>
+        <div class="card-arrow">→</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<section style="background:#fff; padding-bottom:10px;" id="patrons">
+  <div class="patrons-section">
+    <div class="section-head">
+      <div class="section-title">Our Patrons</div>
+      <div class="section-sub">Dakshin Maharashtra Shikshan Mandal, Belgaum</div>
+    </div>
+    <div class="patrons-grid">
+      <div class="patron-card"><div class="patron-name">Smt. Saroj N. Patil</div><div class="patron-role">President, D.M.S. Mandal</div></div>
+      <div class="patron-card"><div class="patron-name">Adv. R. V. Patil</div><div class="patron-role">Vice-President, D.M.S. Mandal</div></div>
+      <div class="patron-card"><div class="patron-name">Prof. Vikram L. Patil</div><div class="patron-role">Secretary, D.M.S. Mandal</div></div>
+      <div class="patron-card"><div class="patron-name">Shri. P. P. Belgaonkar</div><div class="patron-role">Joint-Secretary, D.M.S. Mandal</div></div>
+      <div class="patron-card"><div class="patron-name">Shri. N. B. Khandekar</div><div class="patron-role">Treasurer, D.M.S. Mandal</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <div class="section-title">About the College</div>
+      <div class="section-sub" style="margin-bottom:18px;">Established 1975 · Belgaum, Karnataka</div>
+      <p>D.M.S. Mandal's Bhaurao Kakatkar College has been imparting quality education to students of the border district of Belgaum since 1975. Named after philanthropist Late Shri. Bhaurao Dhanajirao Kakatkar, the college promotes scientific temper, self-reliance, and self-esteem among unprivileged young people.</p>
+      <p>The college offers aided UG Courses in Commerce, Arts, Science and self-finance courses including M.Com and M.Sc. Chemistry. Re-accredited at 'A' Grade by NAAC with CGPA 3.11.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-box"><span class="stat-number">1975</span><span class="stat-label">Established</span></div>
+      <div class="stat-box"><span class="stat-number">A</span><span class="stat-label">NAAC Grade</span></div>
+      <div class="stat-box"><span class="stat-number">3.11</span><span class="stat-label">NAAC CGPA</span></div>
+      <div class="stat-box"><span class="stat-number">45+</span><span class="stat-label">DMS Institutions</span></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="footer-logo">Bhaurao Kakatkar College, Belgaum</div>
+  <div class="footer-text">
+    Jyoti College Compound, Club Road, Camp, Belgaum – 590001, Karnataka, India<br>
+    📞 9011573977 / 9663880264 &nbsp;|&nbsp; ✉ <a href="mailto:bkcollegebgm@gmail.com">bkcollegebgm@gmail.com</a><br>
+    🌐 <a href="http://www.bkcollegebgm.org" target="_blank">www.bkcollegebgm.org</a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-text">© 2026 D.M.S. Mandal's Bhaurao Kakatkar College. All rights reserved.</div>
+</footer>
+
+
+<!-- ═══ MODAL 1: ICAPCMSSD ═══ -->
+<div class="modal-overlay" id="modal-ica">
+  <div class="modal-box">
+    <div class="modal-hero" style="background:linear-gradient(135deg,#0d1b2a,#0a2a3a)">
+      <button class="modal-close" onclick="closeModal('ica')">✕</button>
+      <span class="modal-type">International Conference · 08 May 2026 · ICAPCMSSD 2026</span>
+      <div class="modal-title">Advances in Physical, Chemical and Mathematical Sciences for Sustainable Development</div>
+    </div>
+    <div class="modal-body">
+      <div class="info-row">
+        <div class="info-chip">📅 08 May 2026</div>
+        <div class="info-chip">🏛 Physics · Chemistry · Mathematics · IQAC</div>
+        <div class="info-chip">📄 IJMSI Journal (ISSN)</div>
+        <div class="info-chip">🏆 Best Poster &amp; Oral Award</div>
+      </div>
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab(this,'ica-about')">About</button>
+        <button class="tab-btn" onclick="switchTab(this,'ica-themes')">Themes</button>
+        <button class="tab-btn" onclick="switchTab(this,'ica-speakers')">Guest Speakers</button>
+        <button class="tab-btn" onclick="switchTab(this,'ica-papers')">Call for Papers</button>
+        <button class="tab-btn" onclick="switchTab(this,'ica-reg')">Registration</button>
+        <button class="tab-btn" onclick="switchTab(this,'ica-committee')">Committee</button>
+      </div>
+
+      <div class="tab-content active" id="ica-about">
+        <div class="modal-sec">
+          <h3>About the Conference</h3>
+          <p>The International Conference on Advances in Physical, Chemical and Mathematical Sciences for Sustainable Development (ICAPCMSSD 2026) is jointly organized by the Department of Physics, Department of Chemistry, Department of Mathematics and IQAC of Bhaurao Kakatkar College, Belgaum.</p>
+          <p>The conference aims to bring together researchers, academicians, industry experts, and students from across the world to share recent advances and innovative ideas in physics, chemistry, and mathematics — with a focus on interdisciplinary research contributing to sustainable development and addressing global challenges such as energy sustainability, environmental protection, advanced materials, and technological innovation.</p>
+          <h3 style="margin-top:20px">Objectives</h3>
+          <ul>
+            <li>Promote interdisciplinary research in physical, chemical, and mathematical sciences</li>
+            <li>Discuss recent developments and innovations contributing to sustainable development</li>
+            <li>Provide a platform for researchers, academicians, and students to share their work</li>
+            <li>Encourage collaboration between academia, research institutions, and industry</li>
+            <li>Explore scientific solutions for global environmental and technological challenges</li>
+          </ul>
+        </div>
+        <div class="modal-sec" style="margin-top:20px">
+          <h3>Important Dates</h3>
+          <div class="dates-box">
+            <div class="date-item"><span class="date-label">Last Date: Registration &amp; Abstract Submission</span><span class="date-val">30 April 2026</span></div>
+            <div class="date-item"><span class="date-label">Submission of Full-Length Paper</span><span class="date-val">03 May 2026</span></div>
+            <div class="date-item"><span class="date-label">Conference Date</span><span class="date-val">08 May 2026</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ica-themes">
+        <div class="modal-sec">
+          <h3>Conference Themes</h3>
+          <div class="theme-cols">
+            <div class="theme-col">
+              <h4>⚛ Physics</h4>
+              <ul><li>Nano Science &amp; Nano Technology</li><li>Smart Materials</li><li>Spectroscopic Techniques</li><li>Computational Physics</li><li>Energy Systems</li><li>Technologies for Sustainable Development</li></ul>
+            </div>
+            <div class="theme-col">
+              <h4>🧪 Chemistry</h4>
+              <ul><li>Advanced Materials Synthesis &amp; Characterization</li><li>Corrosion Science &amp; Surface Engineering</li><li>Electrochemistry &amp; Energy Storage</li><li>Green &amp; Sustainable Chemistry</li><li>Analytical &amp; Environmental Chemistry</li><li>Computational Chemistry &amp; Molecular Modelling</li><li>Pharmaceutical Chemistry &amp; Drug Discovery</li><li>Polymer Chemistry &amp; Technology</li></ul>
+            </div>
+            <div class="theme-col">
+              <h4>∑ Mathematics</h4>
+              <ul><li>Applications in Topology</li><li>Fluid Dynamics</li><li>Applications of Graph Theory</li><li>Advances in Pure and Applied Mathematics</li><li>Computational Mathematics</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ica-speakers">
+        <div class="modal-sec">
+          <h3>Guest Speakers</h3>
+          <p style="font-style:italic;color:var(--muted)">Speaker details will be announced soon. Please check back for updates.</p>
+          <div class="speakers-grid">
+            <div class="speaker-card"><div class="speaker-photo-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="coming-soon-badge">Coming Soon</div><div class="speaker-name-placeholder">Chief Guest</div><div class="speaker-info-placeholder">Designation · Topic</div></div>
+            <div class="speaker-card"><div class="speaker-photo-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="coming-soon-badge">Coming Soon</div><div class="speaker-name-placeholder">Keynote Speaker</div><div class="speaker-info-placeholder">Designation · Topic</div></div>
+            <div class="speaker-card"><div class="speaker-photo-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="coming-soon-badge">Coming Soon</div><div class="speaker-name-placeholder">Invited Speaker</div><div class="speaker-info-placeholder">Designation · Topic</div></div>
+            <div class="speaker-card"><div class="speaker-photo-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="coming-soon-badge">Coming Soon</div><div class="speaker-name-placeholder">Invited Speaker</div><div class="speaker-info-placeholder">Designation · Topic</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ica-papers">
+        <div class="modal-sec">
+          <h3>Call for Papers</h3>
+          <p>We invite original research articles and review articles. Selected articles will be published in the peer-reviewed ISSN International journal <strong>"International Journal of Multidisciplinary Science and Innovation (IJMSI)"</strong>.</p>
+          <h3 style="margin-top:18px">Submission Guidelines</h3>
+          <ul>
+            <li>Abstract: max 300 words with 3–5 keywords</li>
+            <li>Cover page must contain title, author name, designation, affiliation, contact number, email &amp; address</li>
+            <li>Format: MS Word, Times New Roman, Font Size 12, Line Spacing 1.5</li>
+            <li>Full paper: max 3500 words including graphs/tables (excluding references)</li>
+            <li>Plagiarism similarity index must be below 15% (as per UGC Norms)</li>
+            <li>Submission email: <strong>bkcbgmconferences@gmail.com</strong></li>
+          </ul>
+          <h3 style="margin-top:18px">Poster Presentation Guidelines</h3>
+          <ul>
+            <li>Poster dimensions: 90 cm width × 120 cm length</li>
+            <li>Conference logo to be included (sent after selection)</li>
+            <li>Abstract: max 300 words with 06 keywords in Times New Roman 12</li>
+            <li>Presenting author must be highlighted with asterisk (*) with email</li>
+            <li>Only selected participants allowed for oral presentation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ica-reg">
+        <div class="modal-sec">
+          <h3>Registration Fee</h3>
+          <table class="reg-table">
+            <tr><th>Category</th><th>Participation</th><th>With Publication</th></tr>
+            <tr><td>Faculty</td><td>₹ 500</td><td>₹ 1500</td></tr>
+            <tr><td>Research Scholars</td><td>₹ 300</td><td>₹ 1300</td></tr>
+            <tr><td>Students</td><td>₹ 300</td><td>₹ 1300</td></tr>
+          </table>
+          <h3 style="margin-top:20px">Payment Details</h3>
+          <div class="payment-box">
+            <strong>Bank Holder Name:</strong> Poonam Manohar Varpe<br>
+            <strong>Bank:</strong> State Bank of India &nbsp;|&nbsp; <strong>Branch:</strong> Government Estate Belgaum<br>
+            <strong>Account No:</strong> 34815125615 &nbsp;|&nbsp; <strong>IFSC:</strong> SBIN0005536<br>
+            <strong>MICR Code:</strong> 590002006 &nbsp;|&nbsp; <strong>UPI ID:</strong> pooonam.varpe@oksbi
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn-primary" href="mailto:bkcbgmconferences@gmail.com?subject=Registration: ICAPCMSSD 2026">✉ Register via Email</a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ica-committee">
+        <div class="modal-sec">
+          <h3>Organising Committee</h3>
+          <div class="committee-grid">
+            <div class="committee-card"><div class="committee-role">Convener</div><div class="committee-name">Dr. M. V. Shinde</div><div class="committee-dept">Principal</div></div>
+            <div class="committee-card"><div class="committee-role">Co-Convener</div><div class="committee-name">Dr. M. S. Patil</div><div class="committee-dept">IQAC Coordinator</div></div>
+            <div class="committee-card"><div class="committee-role">Organising Secretary</div><div class="committee-name">Dr. Sonali Salunkhe</div><div class="committee-dept">Head, Dept. of Chemistry</div></div>
+            <div class="committee-card"><div class="committee-role">Jt. Organising Secy.</div><div class="committee-name">Dr. Arjun Kalhambkar</div><div class="committee-dept">Dept. of Chemistry</div></div>
+            <div class="committee-card"><div class="committee-role">Program Coordinator</div><div class="committee-name">Mr. Avadhut Manage</div><div class="committee-dept">Head, Dept. of Physics</div></div>
+            <div class="committee-card"><div class="committee-role">Jt. Program Coordinator</div><div class="committee-name">Mrs. Pushpa M. Patil</div><div class="committee-dept">Head, Dept. of Mathematics</div></div>
+            <div class="committee-card"><div class="committee-role">Member</div><div class="committee-name">Mrs. Manisha B. Kadam</div><div class="committee-dept">Dept. of Chemistry</div></div>
+            <div class="committee-card"><div class="committee-role">Member</div><div class="committee-name">Mrs. Poonam M. Varpe</div><div class="committee-dept">Dept. of Mathematics</div></div>
+            <div class="committee-card"><div class="committee-role">Member</div><div class="committee-name">Mr. Maruti S. Redekar</div><div class="committee-dept">Dept. of Physics</div></div>
+            <div class="committee-card"><div class="committee-role">Member</div><div class="committee-name">Mr. Sachin Muchandi</div><div class="committee-dept">Dept. of Mathematics</div></div>
+          </div>
+          <h3 style="margin-top:22px">Contact</h3>
+          <div class="contact-grid">
+            <div class="contact-card"><div class="contact-name">Dr. Sonali Salunkhe</div><div class="contact-phone">📞 +91 96860 68539</div><div class="contact-email">bkcbgmconferences@gmail.com</div></div>
+            <div class="contact-card"><div class="contact-name">Dr. Arjun Kalkhambkar</div><div class="contact-phone">📞 +91 81479 33935</div><div class="contact-email">bkcbgmconferences@gmail.com</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ MODAL 2: Social Sciences ═══ -->
+<div class="modal-overlay" id="modal-ss">
+  <div class="modal-box">
+    <div class="modal-hero" style="background:linear-gradient(135deg,#1a0d2e,#2e1a4a)">
+      <button class="modal-close" onclick="closeModal('ss')">✕</button>
+      <span class="modal-type">One Day National Seminar · Hybrid Mode · 18 April 2026</span>
+      <div class="modal-title">Social Sciences in the Age of AI: History, Policy, and Society</div>
+    </div>
+    <div class="modal-body">
+      <div class="info-row">
+        <div class="info-chip">📅 18 April 2026 (Saturday)</div>
+        <div class="info-chip">📍 Marutirao Kakatkar Hall</div>
+        <div class="info-chip">🏛 IQAC &amp; Social Sciences Club</div>
+        <div class="info-chip">💻 Hybrid Mode</div>
+      </div>
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab(this,'ss-about')">About</button>
+        <button class="tab-btn" onclick="switchTab(this,'ss-themes')">Sub-Themes</button>
+        <button class="tab-btn" onclick="switchTab(this,'ss-speakers')">Guest Speakers</button>
+        <button class="tab-btn" onclick="switchTab(this,'ss-papers')">Call for Papers</button>
+        <button class="tab-btn" onclick="switchTab(this,'ss-reg')">Registration</button>
+        <button class="tab-btn" onclick="switchTab(this,'ss-committee')">Committee</button>
+      </div>
+
+      <div class="tab-content active" id="ss-about">
+        <div class="modal-sec">
+          <h3>About the Seminar</h3>
+          <p>The seminar "Social Sciences in the Age of AI: History, Policy, and Society" addresses the profound, multi-dimensional impact of Artificial Intelligence on human structures, research methodologies, and governance. It explores how AI is reshaping social science disciplines such as history, sociology, economics, and political science.</p>
+          <p>As AI transitions from a technical tool to a social force, it is redefining the human experience. This seminar provides an interdisciplinary platform to analyze how AI impacts historical research, public policy frameworks, and the very structure of society — moving beyond 'tech-hype' to understand the ethical, legal, and sociological realities of the 21st century.</p>
+          <h3 style="margin-top:20px">Important Dates</h3>
+          <div class="dates-box">
+            <div class="date-item"><span class="date-label">Deadline: Abstract &amp; Full Paper Submission</span><span class="date-val">05 April 2026</span></div>
+            <div class="date-item"><span class="date-label">Notification of Acceptance</span><span class="date-val">08 April 2026</span></div>
+            <div class="date-item"><span class="date-label">Last Date for Registration &amp; Full Paper</span><span class="date-val">10 April 2026</span></div>
+            <div class="date-item"><span class="date-label">Seminar Date</span><span class="date-val">18 April 2026</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ss-themes">
+        <div class="modal-sec">
+          <h3>Major Sub-Themes</h3>
+          <div class="theme-cols">
+            <div class="theme-col"><h4>🏛 History</h4><ul><li>Recent Trends in History</li><li>AI and Archaeology</li><li>Indian Knowledge System in the Age of AI</li><li>AI for Digitizing Archive</li><li>AI &amp; History Research: Opportunities &amp; Challenges</li><li>History of Artificial Intelligence</li><li>Deep-fakes and Historical Truth</li></ul></div>
+            <div class="theme-col"><h4>📊 Economics</h4><ul><li>Recent Trends in Economics</li><li>AI in Agriculture, Industry &amp; Services</li><li>Smart Villages, Financial Inclusion &amp; Gig Economy</li><li>Macro Economics of Traditional Farming</li><li>IKS Approach to Rural Distress</li></ul></div>
+            <div class="theme-col"><h4>🗳 Political Science</h4><ul><li>Recent Trends in Political Science</li><li>AI in E-Governance and Public Policy</li><li>AI in Public Administration</li><li>AI and International Relations</li><li>Technocracy vs. Democracy</li><li>AI and Human Rights</li><li>AI and the Digital Divide</li></ul></div>
+            <div class="theme-col"><h4>👥 Sociology</h4><ul><li>Recent Trends in Sociology</li><li>Role of AI in Indian Society</li><li>AI and Youths</li><li>AI and Social Problems</li><li>AI and Social Stratification</li><li>AI and Rural Society</li><li>AI and Tourism</li><li>AI and Cultural Transformation</li></ul></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ss-speakers">
+        <div class="modal-sec">
+          <h3>Guest Speakers</h3>
+          <p style="font-style:italic;color:var(--muted)">Speaker details will be announced soon. Please check back for updates.</p>
+          <div class="speakers-grid">
+            <div class="speaker-card"><div class="speaker-photo-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="coming-soon-badge">Coming Soon</div><div class="speaker-name-placeholder">Chief Guest</div><div class="speaker-info-placeholder">Designation · Topic</div></div>
+            <div class="speaker-card"><div class="speaker-photo-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="coming-soon-badge">Coming Soon</div><div class="speaker-name-placeholder">Keynote Speaker</div><div class="speaker-info-placeholder">Designation · Topic</div></div>
+            <div class="speaker-card"><div class="speaker-photo-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="coming-soon-badge">Coming Soon</div><div class="speaker-name-placeholder">Invited Speaker</div><div class="speaker-info-placeholder">Designation · Topic</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ss-papers">
+        <div class="modal-sec">
+          <h3>Call for Papers</h3>
+          <p>All accepted papers will be published in a double blind, peer-reviewed international journal (English &amp; Hindi). UGC-CARE protocol, Impact Factor 5.6.</p>
+          <h3 style="margin-top:18px">Submission Guidelines</h3>
+          <ul>
+            <li>Abstract &amp; Full Paper: 1500–3000 words in MS Word format</li>
+            <li>Font Size 12, Line Spacing 1.5</li>
+            <li>Citation Style: APA 7th Edition / MLA / Chicago</li>
+            <li>Plagiarism similarity index below 10%</li>
+            <li>Submission email: <strong>bkcsocialscience@gmail.com</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ss-reg">
+        <div class="modal-sec">
+          <h3>Registration Fee</h3>
+          <table class="reg-table">
+            <tr><th>Category</th><th>Registration Fee</th></tr>
+            <tr><td>Faculty &amp; Academicians: Presentation &amp; Publication</td><td>₹ 1,000</td></tr>
+            <tr><td>Faculty &amp; Academicians: Only Presentation</td><td>₹ 400</td></tr>
+            <tr><td>Research Scholars: Presentation &amp; Publication</td><td>₹ 900</td></tr>
+            <tr><td>Research Scholars: Only Presentation</td><td>₹ 300</td></tr>
+            <tr><td>Participants (All)</td><td>₹ 150</td></tr>
+          </table>
+          <p style="font-size:13px;color:var(--muted);margin-top:8px;font-style:italic">Fee includes Seminar Kit, Lunch, Certificate and e-certificate of Publication.</p>
+          <h3 style="margin-top:20px">Payment Details</h3>
+          <div class="payment-box">
+            <strong>UPI ID:</strong> 9916274771@upi (Google Pay / PhonePe)<br>
+            <strong>Account Holder:</strong> Madan Patil &nbsp;|&nbsp; <strong>Bank:</strong> SBI, Bazaar Belagavi<br>
+            <strong>Account No:</strong> 20166281313 &nbsp;|&nbsp; <strong>IFSC:</strong> SBIN0002204
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn-primary" href="https://forms.gle/FDM61LtxcYLC8LRq5" target="_blank">📝 Fill Registration Form</a>
+          <a class="btn-secondary" href="https://chat.whatsapp.com/CcwHju54FQQ2KIwMvF8HiF" target="_blank">💬 Join WhatsApp Group</a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ss-committee">
+        <div class="modal-sec">
+          <h3>Organising Committee</h3>
+          <div class="committee-grid">
+            <div class="committee-card"><div class="committee-role">Convener</div><div class="committee-name">Dr. M. V. Shinde</div><div class="committee-dept">Principal, BKC Belgaum</div></div>
+            <div class="committee-card"><div class="committee-role">Co-Convener</div><div class="committee-name">Dr. M. S. Patil</div><div class="committee-dept">IQAC Coordinator</div></div>
+            <div class="committee-card"><div class="committee-role">Organising Secretary</div><div class="committee-name">Dr. M. P. Shegunshi</div><div class="committee-dept"></div></div>
+            <div class="committee-card"><div class="committee-role">Organising Secretary</div><div class="committee-name">Dr. P. N. Basargi</div><div class="committee-dept"></div></div>
+            <div class="committee-card"><div class="committee-role">Programme Coordinator</div><div class="committee-name">Shri. P. K. Wadekar</div><div class="committee-dept"></div></div>
+            <div class="committee-card"><div class="committee-role">Programme Coordinator</div><div class="committee-name">Shri. M. O. Patil</div><div class="committee-dept"></div></div>
+          </div>
+          <h3 style="margin-top:22px">Contact</h3>
+          <div class="contact-grid">
+            <div class="contact-card"><div class="contact-name">Dr. Parasharam Basargi</div><div class="contact-phone">📞 8496973736</div></div>
+            <div class="contact-card"><div class="contact-name">Dr. Mallikarjun Shegunashi</div><div class="contact-phone">📞 9482116992</div></div>
+            <div class="contact-card"><div class="contact-name">Mr. Madan Patil</div><div class="contact-phone">📞 9916274771</div></div>
+            <div class="contact-card"><div class="contact-name">Mr. Prasad Wadekar</div><div class="contact-phone">📞 7022077687</div></div>
+          </div>
+          <p style="margin-top:13px;font-size:14px">📧 <strong>bkcsocialscience@gmail.com</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ MODAL 3: Humanities ═══ -->
+<div class="modal-overlay" id="modal-hum">
+  <div class="modal-box">
+    <div class="modal-hero" style="background:linear-gradient(135deg,#1a0d05,#3a1a08)">
+      <button class="modal-close" onclick="closeModal('hum')">✕</button>
+      <span class="modal-type">One Day National Seminar · Dept. of Humanities · 21 April 2026</span>
+      <div class="modal-title">Bridging the Past and Future: Indian Knowledge Systems in Contemporary Society</div>
+    </div>
+    <div class="modal-body">
+      <div class="info-row">
+        <div class="info-chip">📅 21 April 2026</div>
+        <div class="info-chip">📍 Maruti Rao Kakatkar Hall</div>
+        <div class="info-chip">🏛 Marathi · English · Kannada · Hindi</div>
+        <div class="info-chip">📄 SRUJAN Journal (ISSN: 2320-0391)</div>
+      </div>
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab(this,'hum-about')">About</button>
+        <button class="tab-btn" onclick="switchTab(this,'hum-themes')">Sub-Themes</button>
+        <button class="tab-btn" onclick="switchTab(this,'hum-speakers')">Guest Speakers</button>
+        <button class="tab-btn" onclick="switchTab(this,'hum-papers')">Call for Papers</button>
+        <button class="tab-btn" onclick="switchTab(this,'hum-reg')">Registration</button>
+        <button class="tab-btn" onclick="switchTab(this,'hum-committee')">Committee</button>
+      </div>
+
+      <div class="tab-content active" id="hum-about">
+        <div class="modal-sec">
+          <h3>About the Seminar</h3>
+          <p>In a world grappling with complex challenges, the Indian Knowledge System (IKS) offers profound, holistic insights. This vast repository of India's intellectual, scientific, and philosophical heritage provides sustainable paradigms relevant to contemporary issues — from environmental concerns to ethical technology and holistic well-being.</p>
+          <p>This seminar, jointly organized by the Departments of Marathi, English, Kannada, and Hindi, serves as a vital interdisciplinary platform to explore how ancient Indian wisdom can be effectively integrated with modern advancements. Scholars, practitioners, and innovators are invited to rediscover and re-contextualize IKS for global betterment.</p>
+          <h3 style="margin-top:20px">Important Dates</h3>
+          <div class="dates-box">
+            <div class="date-item"><span class="date-label">Last Date for Registration</span><span class="date-val">10 April 2026</span></div>
+            <div class="date-item"><span class="date-label">Submission of Full Length Papers</span><span class="date-val">15 April 2026</span></div>
+            <div class="date-item"><span class="date-label">Seminar Date</span><span class="date-val">21 April 2026</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="hum-themes">
+        <div class="modal-sec">
+          <h3>Major Sub-Themes</h3>
+          <div class="theme-cols">
+            <div class="theme-col"><h4>🟠 मराठी</h4><ul><li>मराठी साहित्यात भारतीय संस्कृतीचे दर्शन</li><li>स्वामी विवेकानंदांच्या तत्त्वज्ञानाचे महत्त्व</li><li>मराठी साहित्य आणि पर्यावरणीय विचार</li><li>मराठीतील भाषांतरित साहित्याचे महत्त्व</li><li>मराठी साहित्यावरील जागतिकीकरणाचा प्रभाव</li></ul></div>
+            <div class="theme-col"><h4>🔵 English</h4><ul><li>Identity and Representation: IKS in Indian English Literature</li><li>Environment Ethics and Eco-criticism: IKS Perspectives</li><li>Colonial Echoes: Translation as a Site of Power and Resistance</li><li>Cross-Cultural Dialogues: IKS in Comparative Literature</li><li>Reclaiming Narrative: IKS and Decolonisation of English Literary Studies</li></ul></div>
+            <div class="theme-col"><h4>🟢 ಕನ್ನಡ</h4><ul><li>ಭಕ್ತಿ ಮತ್ತು ಜಾನಪದ ಸಂಪ್ರದಾಯಗಳು</li><li>ಕನ್ನಡ ಕಾವ್ಯಗಳು ನಿರಂತರ ನೈತಿಕ ಮೌಲ್ಯಗಳ ವಾಹಿನಿಗಳು</li><li>ಕನ್ನಡ ಸಾಹಿತ್ಯ ಮತ್ತು ಸಾಮಾಜಿಕ ಜಾಲತಾಣಗಳ ಪ್ರಭಾವ</li><li>ಕನ್ನಡ ಸಾಹಿತ್ಯ ಮತ್ತು ಪರಿಸರ ಪ್ರಜ್ಞೆ</li><li>ಜಾನಪದ ಸಾಹಿತ್ಯ ಮತ್ತು ಭಾರತೀಯ ಜ್ಞಾನ ವ್ಯವಸ್ಥೆ</li></ul></div>
+            <div class="theme-col"><h4>🔴 हिंदी</h4><ul><li>भारतीय ज्ञान परंपरा में हिंदी साहित्य की भूमिका</li><li>पारंपरिक और आधुनिक शिक्षा प्रणाली</li><li>भारतीय भाषाओं का अनुवाद विज्ञान और मशीन लर्निंग</li><li>भारतीय ज्ञान परंपरा और जीवन मूल्य</li><li>गुरुकुल से राष्ट्रीय शिक्षा नीति २०२० तक</li></ul></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="hum-speakers">
+        <div class="modal-sec">
+          <h3>Guest Speakers</h3>
+          <p style="font-style:italic;color:var(--muted)">Speaker details will be announced soon. Please check back for updates.</p>
+          <div class="speakers-grid">
+            <div class="speaker-card"><div class="speaker-photo-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="coming-soon-badge">Coming Soon</div><div class="speaker-name-placeholder">Chief Guest</div><div class="speaker-info-placeholder">Designation · Topic</div></div>
+            <div class="speaker-card"><div class="speaker-photo-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="coming-soon-badge">Coming Soon</div><div class="speaker-name-placeholder">Keynote Speaker</div><div class="speaker-info-placeholder">Designation · Topic</div></div>
+            <div class="speaker-card"><div class="speaker-photo-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="coming-soon-badge">Coming Soon</div><div class="speaker-name-placeholder">Invited Speaker</div><div class="speaker-info-placeholder">Designation · Topic</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="hum-papers">
+        <div class="modal-sec">
+          <h3>Call for Papers</h3>
+          <p>All accepted papers after peer review will be published in <strong>SRUJAN Peer-Reviewed Journal (ISSN: 2320-0391)</strong> — Special Edition.</p>
+          <h3 style="margin-top:18px">Submission Guidelines</h3>
+          <ul>
+            <li>Full paper: 1500–3000 words in MS Word format</li>
+            <li>Font Size 12 | English: Times New Roman | Kannada: Nudi | Hindi/Marathi: Unicode</li>
+            <li>Title: bold, centred, fully capitalized; author details below title</li>
+            <li>Abstract: 200–300 words</li>
+            <li>Headings: bold-faced, aligned left, fully capitalized</li>
+            <li>Submission email: <strong>bkchumanities@gmail.com</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-content" id="hum-reg">
+        <div class="modal-sec">
+          <h3>Registration Fee</h3>
+          <table class="reg-table">
+            <tr><th>Category</th><th>Only Participation</th><th>With Publication</th></tr>
+            <tr><td>Faculty Members</td><td>₹ 400</td><td>₹ 1,000</td></tr>
+            <tr><td>Research Scholars</td><td>₹ 300</td><td>₹ 900</td></tr>
+            <tr><td>UG / PG Students</td><td>₹ 100</td><td>—</td></tr>
+          </table>
+          <p style="font-size:13px;color:var(--muted);margin-top:8px;font-style:italic">Payment via UPI using the QR Code provided at registration.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn-primary" href="https://forms.gle/3aGyWCBTBLYtuCBNA" target="_blank">📝 Fill Registration Form</a>
+          <a class="btn-secondary" href="https://chat.whatsapp.com/ISrrtbQQGFdGWf2VcrhOYm?mode=gi_t" target="_blank">💬 Join WhatsApp Group</a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="hum-committee">
+        <div class="modal-sec">
+          <h3>Organising Committee</h3>
+          <div class="committee-grid">
+            <div class="committee-card"><div class="committee-role">Convener</div><div class="committee-name">Dr. M. V. Shinde</div><div class="committee-dept">Principal, BKC Belgaum</div></div>
+            <div class="committee-card"><div class="committee-role">IQAC Co-ordinator</div><div class="committee-name">Dr. M. S. Patil</div><div class="committee-dept">HOD, Dept. of Commerce</div></div>
+            <div class="committee-card"><div class="committee-role">Co-ordinator</div><div class="committee-name">Smt. Anita Patil</div><div class="committee-dept">HOD, Dept. of English · 9448343980</div></div>
+            <div class="committee-card"><div class="committee-role">Organising Secretary</div><div class="committee-name">Smt. Neeta Patil</div><div class="committee-dept">HOD, Dept. of Hindi · 9844819874</div></div>
+            <div class="committee-card"><div class="committee-role">Jt. Organising Secretary</div><div class="committee-name">Smt. Kavita Patil</div><div class="committee-dept">HOD, Dept. of Marathi · 9449479620</div></div>
+            <div class="committee-card"><div class="committee-role">Jt. Organising Secretary</div><div class="committee-name">Smt. Jayshree Mugali</div><div class="committee-dept">HOD, Dept. of Kannada · 7829089904</div></div>
+            <div class="committee-card"><div class="committee-role">Member</div><div class="committee-name">Shri Sunil Tate</div><div class="committee-dept">9448035827</div></div>
+            <div class="committee-card"><div class="committee-role">Member</div><div class="committee-name">Dr. Amit Chingali</div><div class="committee-dept">8861856219</div></div>
+            <div class="committee-card"><div class="committee-role">Member</div><div class="committee-name">Shri. Shubham Chavan</div><div class="committee-dept">8095804963</div></div>
+            <div class="committee-card"><div class="committee-role">Member</div><div class="committee-name">Shri Gangaram Misale</div><div class="committee-dept">8095119132</div></div>
+          </div>
+          <h3 style="margin-top:22px">Contact</h3>
+          <div class="contact-grid">
+            <div class="contact-card"><div class="contact-name">College Office</div><div class="contact-phone">📞 9011573977 / 9663880264</div><div class="contact-email">bkcollegebgm@gmail.com</div></div>
+            <div class="contact-card"><div class="contact-name">Paper Submission</div><div class="contact-phone"></div><div class="contact-email">bkchumanities@gmail.com</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function openModal(id) { document.getElementById('modal-'+id).classList.add('open'); document.body.style.overflow='hidden'; }
+function closeModal(id) { document.getElementById('modal-'+id).classList.remove('open'); document.body.style.overflow=''; }
+document.querySelectorAll('.modal-overlay').forEach(o => { o.addEventListener('click', function(e){ if(e.target===this){ this.classList.remove('open'); document.body.style.overflow=''; } }); });
+document.addEventListener('keydown', e => { if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(m=>{ m.classList.remove('open'); document.body.style.overflow=''; }); });
+function switchTab(btn, targetId) {
+  const body = btn.closest('.modal-body');
+  body.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  body.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(targetId).classList.add('active');
+}
+document.querySelectorAll('nav a').forEach(a => { a.addEventListener('click', function(){ document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active')); this.classList.add('active'); }); });
+</script>
+</body>
+</html>

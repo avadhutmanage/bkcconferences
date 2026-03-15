@@ -146,6 +146,19 @@ footer{background:#07101a;padding:38px 24px 22px;text-align:center;}
 .contact-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--navy);}
 .contact-phone{font-family:'DM Mono',monospace;font-size:13px;color:var(--gold);margin-top:4px;}
 .contact-email{font-size:13px;color:var(--muted);font-style:italic;margin-top:2px;word-break:break-all;}
+
+.visitor-counter {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; margin-top: 16px;
+}
+.visitor-box {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25);
+  padding: 10px 22px;
+}
+.visitor-icon { font-size: 18px; }
+.visitor-label { font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); display: block; }
+.visitor-count { font-family: "Playfair Display", serif; font-size: 22px; font-weight: 700; color: var(--gold-light); display: block; line-height: 1; }
 </style>
 </head>
 <body>
@@ -287,6 +300,15 @@ footer{background:#07101a;padding:38px 24px 22px;text-align:center;}
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
       Instagram
     </a>
+  </div>
+  <div class=visitor-counter>
+    <div class=visitor-box>
+      <span class=visitor-icon>👁</span>
+      <div>
+        <span class=visitor-label>Total Visitors</span>
+        <span class=visitor-count id=visitor-count>Loading...</span>
+      </div>
+    </div>
   </div>
   <div class="footer-divider"></div>
   <div class="footer-text">© 2026 D.M.S. Mandal's Bhaurao Kakatkar College. All rights reserved.</div>
@@ -704,6 +726,23 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById(targetId).classList.add("active");
     });
   });
+
+
+  // Visitor counter using localStorage
+  var storageKey = "bkc_visitor_count";
+  var count = parseInt(localStorage.getItem(storageKey) || "0") + 1;
+  localStorage.setItem(storageKey, count);
+
+  // Use a free public counter API (countapi.xyz)
+  fetch("https://api.countapi.xyz/hit/bkc-belgaum-conferences/visits")
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      document.getElementById("visitor-count").textContent = data.value.toLocaleString("en-IN");
+    })
+    .catch(function() {
+      // Fallback to localStorage count if API fails
+      document.getElementById("visitor-count").textContent = count.toLocaleString("en-IN");
+    });
 
   // Nav active highlight
   document.querySelectorAll("nav a").forEach(function(a) {

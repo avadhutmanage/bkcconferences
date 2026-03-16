@@ -744,7 +744,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   document.addEventListener("keydown", function(e) {
     if (e.key === "Escape") {
-      document.querySelectorAll(".modal.modal-overlay.open").forEach(function(m) {
+      document.querySelectorAll(".modal-overlay.open").forEach(function(m) {
         m.classList.remove("open");
         document.body.style.overflow = "";
       });
@@ -756,7 +756,7 @@ document.addEventListener("DOMContentLoaded", function() {
     btn.addEventListener("click", function() {
       var targetId = this.getAttribute("data-tab");
       var body = this.closest(".modal-body");
-      rySelectorAll(".tab-btn").forEach(function(b) { b.classList.remove("active"); });
+      body.querySelectorAll(".tab-btn").forEach(function(b) { b.classList.remove("active"); });
       body.querySelectorAll(".tab-content").forEach(function(c) { c.classList.remove("active"); });
       this.classList.add("active");
       document.getElementById(targetId).classList.add("active");
